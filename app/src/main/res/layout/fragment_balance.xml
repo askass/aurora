@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <FrameLayout
+      android:id="@+id/main_balance_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:visibility="visible">
+    <ScrollView
+        android:id="@+id/balance_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tool_grey"
+
+        >
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:splitMotionEvents="false">
+
+      <!--TOP BAR-->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingStart="20dp"
+          android:paddingEnd="15dp"
+          android:layout_marginTop="10dp"
+          android:background="@color/blue_row">
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+          <TextView
+              android:layout_width="90dp"
+              android:layout_height="30dp"
+              android:text="@string/type"
+              android:textColor="@color/white_txt_color"
+              android:paddingStart="10dp"
+              android:paddingEnd="10dp"
+              android:textSize="12sp"
+              android:gravity="center_vertical"
+              android:background="@drawable/custom_transparent_border_bottom_wt"/>
+          <RadioGroup
+              android:layout_width="90dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="bottom">
+            <RadioButton
+                android:id="@+id/rev_radio_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:maxLines="1"
+                android:saveEnabled="false"
+                android:text="@string/rev"
+                android:textColor="@color/white_txt_color"
+                android:theme="@style/WhiteRadioButton"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/exp_radio_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/exp"
+                android:textColor="@color/white_txt_color"
+                android:saveEnabled="false"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:theme="@style/WhiteRadioButton"/>
+
+            <RadioButton
+                android:id="@+id/cap_radio_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cap"
+                android:textColor="@color/white_txt_color"
+                android:saveEnabled="false"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:theme="@style/WhiteRadioButton"/>
+          </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/last_7_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_ripple_primary"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingEnd="5dp">
+          <TextView
+              android:id="@+id/last_7_sum"
+              android:layout_width="match_parent"
+              android:layout_height="35dp"
+              android:text=""
+              android:textColor="@color/white_txt_color"
+              android:textSize="18sp"
+              android:gravity="bottom|end"
+              android:maxLines="1"/>
+          <TextView
+              android:id="@+id/last_7_vs_plan"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:text=""
+              android:textColor="@color/white_txt_color"
+              android:gravity="top|end"
+              android:textSize="12sp"
+              android:maxLines="2"/>
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:text="@string/last_7_days"
+              android:textColor="@color/white_txt_color"
+              android:gravity="top|end"
+              android:textSize="14sp"
+              android:maxLines="2"
+              android:ellipsize="end"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/last_28_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_ripple_primary"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingEnd="5dp">
+          <TextView
+              android:id="@+id/last_28_sum"
+              android:layout_width="match_parent"
+              android:layout_height="35dp"
+              android:text=""
+              android:textColor="@color/white_txt_color"
+              android:textSize="18sp"
+              android:gravity="bottom|end"
+              android:maxLines="1"/>
+          <TextView
+              android:id="@+id/last_28_vs_plan"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:text=""
+              android:textColor="@color/white_txt_color"
+              android:gravity="top|end"
+              android:textSize="12sp"
+              android:maxLines="2"/>
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:text="@string/last_28_days"
+              android:textColor="@color/white_txt_color"
+              android:gravity="top|end"
+              android:textSize="14sp"
+              android:maxLines="2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            >
+            <LinearLayout
+                android:id="@+id/last_90_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/custom_ripple_primary"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingEnd="5dp">
+              <TextView
+                  android:id="@+id/last_90_sum"
+                  android:layout_width="match_parent"
+                  android:layout_height="35dp"
+                  android:text=""
+                  android:textColor="@color/white_txt_color"
+                  android:textSize="18sp"
+                  android:gravity="bottom|end"
+                  android:maxLines="1"/>
+              <TextView
+                  android:id="@+id/last_90_vs_plan"
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:text=""
+                  android:textColor="@color/white_txt_color"
+                  android:gravity="top|end"
+                  android:textSize="12sp"
+                  android:maxLines="2"/>
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:text="@string/last_90_days"
+                  android:textColor="@color/white_txt_color"
+                  android:gravity="top|end"
+                  android:textSize="14sp"
+                  android:maxLines="2"/>
+            </LinearLayout>
+
+
+          <TextView
+              android:id="@+id/top_bar_scale_label"
+              android:layout_width="wrap_content"
+              android:layout_height="23dp"
+              android:textColor="@color/white_txt_color"
+              android:text=""
+              android:textSize="14sp"
+              android:gravity="bottom"
+              android:layout_gravity="end"
+              android:layout_marginBottom="10dp"
+              android:paddingEnd="5dp"/>
+        </LinearLayout>
+
+      </LinearLayout>
+      <!--LAST OPERATIONS-->
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="11dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/custom_white_border_top_bottom">
+
+          <TextView
+              android:id="@+id/category_type"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:layout_marginTop="5dp"
+              android:text="@string/last_operations"
+              android:textSize="16sp"
+              android:gravity="center_vertical"
+              android:textColor="@color/table_txt_color"/>
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/last_operations_rv"
+              android:layout_width="match_parent"
+              android:layout_height="280dp"/>
+
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:paddingTop="1dp">
+
+            <TextView
+                android:id="@+id/new_operation_btn"
+                android:layout_width="160dp"
+                android:layout_height="37dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/new_operation"
+                android:textColor="@color/pressed_txt_color"
+                android:textAllCaps="false"
+                android:background="@drawable/custom_btn_ripple"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+          </FrameLayout>
+
+
+
+        </LinearLayout>
+      <!--BALANCE-->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_marginTop="11dp"
+          android:layout_marginBottom="40dp"
+          android:paddingStart="20dp"
+          android:paddingEnd="20dp"
+          android:background="@drawable/custom_white_border_top_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+          <LinearLayout
+              android:id="@+id/get_balance_btn"
+              android:layout_width="160dp"
+              android:layout_height="40dp"
+              android:orientation="horizontal"
+              android:clickable="true"
+              android:focusable="true"
+              android:background="@drawable/custom_ripple">
+            <ImageView
+                android:id="@+id/plus_minus_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/analysis_icon_plus"
+                />
+            <TextView
+                android:id="@+id/balance_header"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:text="@string/balance"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/table_txt_color"/>
+            <ProgressBar
+                android:id="@+id/balance_progress_bar"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:clickable="false"
+                android:visibility="gone"
+                android:padding="2dp"
+                />
+          </LinearLayout>
+
+
+
+          <Spinner
+              android:id="@+id/year_spinner"
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="37dp"
+              android:layout_gravity="center_vertical|end"
+              android:layout_marginStart="40dp"
+              />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/balance_line"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/border_row" />
+
+        <!--Balance container-->
+        <LinearLayout
+            android:id="@+id/balance_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:alpha="1"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+          <TextView
+              android:id="@+id/assets_header"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:text="@string/assets"
+              android:textSize="15sp"
+              android:gravity="center_vertical"
+              android:textColor="@color/table_txt_color"/>
+
+          <LinearLayout
+              android:id="@+id/assets_container"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:orientation="horizontal"
+              android:background="@drawable/custom_transparent_border_top_light">
+            <TextView
+                android:id="@+id/total_assets_header"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="@string/total_assets"
+                android:textSize="15sp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:id="@+id/total_assets_sum"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:text=""
+                android:textSize="15sp"
+                android:gravity="center_vertical|end"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorPrimary"/>
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/equity_header"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:text="@string/equity"
+              android:textSize="15sp"
+              android:gravity="center_vertical"
+              android:textColor="@color/table_txt_color"/>
+
+          <LinearLayout
+              android:id="@+id/equity_container"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:orientation="horizontal"
+              android:background="@drawable/custom_transparent_border_top_light">
+            <TextView
+                android:id="@+id/total_equity_header"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="@string/total_equity"
+                android:textSize="15sp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:id="@+id/total_equity_sum"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:text=""
+                android:textSize="15sp"
+                android:gravity="center_vertical|end"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorPrimary"/>
+          </LinearLayout>
+        </LinearLayout>
+
+          <Spinner
+              android:id="@+id/scale_spinner"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:layout_gravity="center_vertical"
+              android:layout_marginStart="200dp"
+              android:layout_marginBottom="10dp"
+              />
+
+      </LinearLayout>
+
+
+
+      </LinearLayout>
+    </ScrollView>
+
+  </FrameLayout>
+
+  <FrameLayout
+      android:id="@+id/new_operation_holder"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:visibility="gone">
+
+  </FrameLayout>
+
+
+
+
+
+
+
+
+</FrameLayout>

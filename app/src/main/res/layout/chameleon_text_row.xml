@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:id="@+id/rowCollapseContainer"
+    android:splitMotionEvents="false"
+    android:clipChildren="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:id="@+id/chameleonTextRow"
+            android:orientation="horizontal"
+            android:background="@drawable/custom_ripple_wt">
+            <!--Chameleon Text Row (ctr) collapse button   android:background="@drawable/custom_ripple"-->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ctr_triangle"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:rotation="0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/plan_icon_triangle_bm_dark"/>
+
+            <TextView
+                android:id="@+id/ctr_text_lbl"
+                android:layout_width="143dp"
+                android:layout_height="42dp"
+                android:gravity="center_vertical|start"
+                android:text=""
+                android:textColor="@color/table_txt_color"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                />
+
+            <TextView
+                android:id="@+id/ctr_value_lbl"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_vertical|end"
+                android:text=""
+                android:textColor="@color/table_txt_color"
+                android:textSize="14sp" />
+          </LinearLayout>
+
+
+</LinearLayout>

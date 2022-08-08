@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="tech.aurorafin.aurora.PlanFragment"
+    android:splitMotionEvents="false">
+
+    <!-- TABLE VIEW -->
+    <LinearLayout
+        android:id="@+id/tableView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:splitMotionEvents="false">
+
+        <!--Recycler View Container-->
+        <tech.aurorafin.aurora.SpecLinearLayout
+        android:id="@+id/recyclerViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="42dp"
+        android:clipChildren="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/planTable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:splitMotionEvents="false"
+                />
+
+        </tech.aurorafin.aurora.SpecLinearLayout>
+
+        <!--Bottom total view-->
+        <LinearLayout
+            android:id="@+id/planTotal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/custom_tool_border_top_grey"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:id="@+id/selectAllCancelBtn"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/selectAll"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/custom_ripple"
+                android:textSize="14sp"
+                android:visibility="invisible"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/planTotalTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/default_txt_color"
+                android:textSize="14sp"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <!--Bottom input view-->
+        <LinearLayout
+            android:id="@+id/planInput"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_transparent_border_top"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingTop="1dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/plan_input_plusminus_btn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_gravity="center"
+                android:src="@drawable/plan_btn_plusminus"
+                android:background="@drawable/custom_ripple"/>
+
+            <tech.aurorafin.aurora.PlanInpitEdit
+                android:id="@+id/planInputEditText"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/table_txt_color"
+                android:textSize="14sp"
+                android:background="@color/transparent"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:inputType="numberSigned|numberDecimal"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/plan_input_ok_btn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center"
+                android:src="@drawable/plan_btn_ok"
+                android:background="@drawable/custom_ripple"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- VIEW FOR TABLE LOCKER-->
+    <tech.aurorafin.aurora.ScreenLocker
+        android:id="@+id/plan_table_screen_locker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:alpha="0"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </tech.aurorafin.aurora.ScreenLocker>
+
+    <!-- VIEW FOR DARK BACKGROUND-->
+   <View
+        android:id="@+id/filterShadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:alpha="0"
+        android:layout_marginBottom="35dp"
+        android:clickable="false"
+        android:focusable="false"
+        />
+
+    <!-- FILTER CURTAIN  44dp-->
+    <FrameLayout
+        android:id="@+id/curtain_holder"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/custom_tool_border_bottom">
+
+
+
+        <LinearLayout
+            android:id="@+id/planFilter"
+            android:layout_width="match_parent"
+            android:layout_height="423dp"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="bottom"
+            >
+
+            <FrameLayout
+                android:id="@+id/filter_inner_container"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:background="@drawable/custom_transparent_border_bottom"
+                android:alpha="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                       >
+                        
+                        <TextView
+                            android:layout_width="135dp"
+                            android:layout_height="30dp"
+                            android:text="@string/year1"
+                            android:textColor="@color/table_txt_color"
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:paddingStart="20dp"
+                            />
+
+                        <NumberPicker
+                            android:id="@+id/numberPicker1"
+                            android:layout_width="115dp"
+                            android:layout_height="150dp"
+                            android:theme="@style/NumberPickerTheme"
+                            android:background="@drawable/custom_border_top_bottom"
+                            android:gravity="center_horizontal"
+                            />
+
+                        <TextView
+                            android:layout_width="135dp"
+                            android:layout_height="30dp"
+                            android:text="@string/group_by"
+                            android:textColor="@color/table_txt_color"
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:paddingStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="5dp"
+                            />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingStart="10dp">
+
+                            <RadioButton
+                                android:id="@+id/month_radio_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:text="@string/month"
+                                android:textColor="@color/grey_txt_color"
+                                android:checked="true"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="0dp"
+                                android:saveEnabled="false"/>
+                            <RadioButton
+                                android:id="@+id/week_radio_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:text="@string/week"
+                                android:textColor="@color/grey_txt_color"
+                                android:saveEnabled="false"
+                                android:textSize="14sp"
+                                />
+                        </RadioGroup>
+
+                    </LinearLayout>
+                    <FrameLayout
+                        android:id="@+id/category_filter_holder"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/custom_bkg_white_border_top_left"
+                        android:layout_marginBottom="1dp"
+                        />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!--TOOLBAR-->
+            <LinearLayout
+                android:id="@+id/toolBarPanel"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@drawable/custom_transparent_border_bottom"
+                android:orientation="horizontal"
+                android:splitMotionEvents="false"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/plan_copy_btn"
+                    android:layout_width="43dp"
+                    android:layout_height="39dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_ripple"
+                    android:src="@drawable/plan_btn_copy"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/light_grey_line" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/plan_paste_btn"
+                    android:layout_width="43dp"
+                    android:layout_height="39dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_ripple"
+                    android:src="@drawable/plan_btn_paste" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/light_grey_line" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/plan_erase_btn"
+                    android:layout_width="43dp"
+                    android:layout_height="39dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_ripple"
+                    android:src="@drawable/plan_btn_erase" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/light_grey_line" />
+
+                <!--========TOOLTRACK========-->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/toolTrack"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@mipmap/tool_track" />
+                <!--=========================-->
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/light_grey_line" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/plan_toolbar_back_btn"
+                    android:layout_width="43dp"
+                    android:layout_height="39dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_ripple"
+                    android:src="@drawable/plan_btn_back"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/plan_toolbar_forward_group"
+                    android:layout_height="match_parent"
+                    android:layout_width="46dp"
+                    android:layout_marginEnd="-46dp"
+                    android:visibility="invisible"
+                    android:alpha="0">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        android:background="@color/light_grey_line" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/plan_toolbar_forward_btn"
+                        android:layout_width="43dp"
+                        android:layout_height="39dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/custom_ripple"
+                        android:src="@drawable/plan_btn_forward"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/group_save_triangle"
+                    android:layout_width="92dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:translationX="0dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        android:background="@color/light_grey_line" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/plan_toolbar_save_btn"
+                            android:layout_width="43dp"
+                            android:layout_height="39dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/custom_ripple"
+                            android:saveEnabled="false"
+                            android:src="@drawable/plan_btn_save"/>
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        android:background="@color/light_grey_line" />
+
+
+                    <FrameLayout
+                        android:id="@+id/toolbar_collapse_btn"
+                        android:layout_width="43dp"
+                        android:layout_height="39dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/custom_ripple"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/plan_toolbar_triangle"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="1dp"
+                            android:rotation="-60"
+                            android:src="@drawable/plan_btn_triangle" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <View
+            android:id="@+id/line_that_breaking_mind"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_line"
+            android:layout_gravity="top"/>
+
+    </FrameLayout>
+
+
+
+
+
+
+
+</FrameLayout>

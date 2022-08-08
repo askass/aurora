@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:opacity="opaque">
+
+    <!-- Цвет фона, предпочтительно как в главной теме -->
+    <item android:drawable="@color/tool_grey"/>
+
+    <!-- Лого приложения - 144dp версия иконки приложения -->
+    <item>
+        <bitmap
+            android:src="@drawable/launch_logo_start"
+            android:gravity="center"/>
+    </item>
+</layer-list>

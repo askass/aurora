@@ -1,0 +1,215 @@
+<resources>
+    <string name="app_name">Aurora</string>
+
+    <string name="plan">Plan</string>
+
+    <!--Selection Btns Textx-->
+    <string name="cancel">Deselect All</string>
+    <string name="selectAll">Select All</string>
+
+    <!--Copy Paste-->
+    <string name="copied">Copied</string>
+    <string name="pasted">Pasted</string>
+
+    <!--Periods-->
+    <string name="year">YEAR</string>
+    <string name="year1">Year</string>
+    <string name="group_by">Group by</string>
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+
+    <!--CATEGORIES-->
+    <string name="categories">Categories</string>
+    <string name="expense">Expense</string>
+    <string name="revenue">Revenue</string>
+    <string name="capital">Capital</string>
+    <string name="new_category">NEW CATEGORY</string>
+    <string name="update_category">UPDATE CATEGORY</string>
+    <string name="add">+ Add</string>
+    <string name="aggregator">Aggregate</string>
+    <string name="save">Save</string>
+    <string name="update">Update</string>
+    <string name="cancel1">Cancel</string>
+    <string name="type">Type</string>
+    <string name="name">Name</string>
+    <string name="category">Category</string>
+    <string name="nickname_n_let">Nickname (8 let.)</string>
+    <string name="categ">Categ.</string>
+    <string name="active">Active</string>
+
+    <string name="delete_message">The plan data and operations of the category also will be removed.</string>
+    <string name="delete_title">Delete category?</string>
+    <string name="ok">OK</string>
+
+    <string name="saved">Saved</string>
+    <string name="save_canceled">Save terminated</string>
+    <string name="channel_name">Database operations service</string>
+    <string name="database_operations_service">Database operations service</string>
+    <string name="waiting">Waiting…</string>
+    <string name="DB_SERVICE_IS_NULL">Database writing operations unavailable</string>
+    <string name="check_errors">Checking errors</string>
+    <string name="running">Running…</string>
+    <string name="database_recovery">Database Recovery</string>
+    <string name="database_recovery_message">Database operations service did not complete tasks correct last time. Local database backup recovered.</string>
+    <string name="completing_tasks">Completing tasks…</string>
+    <string name="tasks_complete">All tasks completed. Service stopped.</string>
+
+    <!--BALANCE-->
+    <string name="last_operations">Last operations</string>
+    <string name="new_operation">+ New</string>
+    <string name="exp">Exp</string>
+    <string name="rev">Rev</string>
+    <string name="cap">Cap</string>
+    <string name="new_operation_header">NEW OPERATION</string>
+    <string name="update_operation_header">UPDATE OPERATION</string>
+    <string name="Amount">Amount</string>
+    <string name="required">Required</string>
+    <string name="decimal">Decimal</string>
+    <string name="date">Date</string>
+    <string name="select_one">Select one</string>
+    <string name="description">Description</string>
+    <string name="optional">Optional</string>
+    <string name="operations">Operations</string>
+    <string name="done">Done</string>
+    <string name="delete_operation">Delete operation</string>
+    <string name="delete_operations">Delete operations</string>
+    <string name="delete_operations_message">Are you sure you want to permanently delete these operations?</string>
+    <string name="delete_operation_message">Are you sure you want to permanently delete this operation?</string>
+    <string name="balance">Balance</string>
+    <string name="date_range">Date range</string>
+    <string name="analysis">Analysis</string>
+    <string name="q">Q</string>
+    <string name="h">H</string>
+    <string name="ytd">YTD</string>
+    <string name="to">to</string>
+    <string name="period">Period</string>
+    <string name="all">All</string>
+    <string name="filtered">Filtered</string>
+    <string name="fact">Actual</string>
+
+    <string name="no_scale">× 1</string>
+    <string name="Thousand">× 1 000</string>
+    <string name="Million">× 1 million</string>
+    <string name="Billion">× 1 billion</string>
+    <string name="Trillion">× 1 trillion</string>
+    <string name="total">Total</string>
+    <string name="cumulative">Cumulative</string>
+    <string name="last_7_days">Last\n 7 days</string>
+    <string name="last_28_days">Last\n 28 days</string>
+    <string name="last_90_days">Last\n 90 days</string>
+    <string name="vs_plan">\nvs Plan</string>
+    <string name="get_balance">Get Balance</string>
+    <string name="assets">Assets</string>
+    <string name="total_assets">Total Assets</string>
+    <string name="equity">Funds</string>
+    <string name="total_equity">Total Funds</string>
+    <string name="close">Close</string>
+    <string name="cash">Cash</string>
+    <string name="profit">Earnings</string>
+
+    <!--Backup-->
+    <string name="backup">Backup</string>
+    <string name="account">Account</string>
+    <string name="connect">Connect</string>
+    <string name="connection_canceled">Connection canceled</string>
+    <string name="connected">Connected</string>
+    <string name="upload">Upload</string>
+    <string name="no_backup_available">No Backup available</string>
+    <string name="database_copy">Database copy</string>
+    <string name="network_error">No internet connection</string>
+    <string name="auto_backup">Auto backup </string>
+    <string name="upload_error">Upload error, please try upload again</string>
+    <string name="auto_upload_error">Drive database backup failed</string>
+    <string name="auto_upload_error_msg">Tap to open settings</string>
+    <string name="auto_upload_settings_error">Please update auto backup settings</string>
+    <string name="auto_upload_success">Drive database copy updated</string>
+    <string name="next_backup">Next backup</string>
+    <string name="db_backup">Drive database backup</string>
+    <string name="backup_upload_run">Upload running…</string>
+    <string name="days_28_backup">Each 28 days</string>
+    <string name="days_7_backup">Each 7 days</string>
+    <string name="days_1_backup">Everyday</string>
+
+    <string name="drive_backup">Drive backup</string>
+    <string name="drive_backup_msg">Are you sure you want to download Drive database copy?</string>
+    <string name="drive_backup_alert">Local database will be replaced!</string>
+    <string name="download">Download</string>
+    <string name="drive_backup_progress">Please wait until Backup Download is finished. Do not close the app.</string>
+    <string name="service_is_running">Database operations service is still running. Drive backup download is unavailable until it stops. Please try again later.</string>
+    <string name="terminate_title">Terminate download?</string>
+    <string name="terminate_msg">If you terminate this download, an app may misbehave.</string>
+    <string name="terminate">Terminate</string>
+    <string name="closeCap">CLOSE</string>
+    <string name="download_error">An error has occurred. Please check Drive connection and try again.</string>
+    <string name="download_success">Download complete. Backup restored successfully.</string>
+    <string name="export">Export</string>
+
+    <!--EXPORT-->
+    <string name="export_query">Export query</string>
+    <string name="query_running">Export query running…</string>
+    <string name="query_complete">Query complete</string>
+    <string name="export_csv">Export</string>
+    <string name="parameters">Parameters</string>
+    <string name="tables">Tables</string>
+    <string name="day">Day</string>
+    <string name="no_group">No group</string>
+    <string name="delimiter">Delimiter</string>
+    <string name="continue1">Continue</string>
+    <string name="warning">Warning</string>
+    <string name="warning_msg">Database operations service is running. If execute this query right now, the file will possibly include some mistakes.</string>
+    <string name="tap_to_save">Tap to save or share</string>
+
+    <string name="csv_header_comma">Table, Type, Category Id, Category Name, Aggregate Id, Aggregate Name, Start Year, Start Month, Start Day, End Year, End Month, End Day, Period Num, Period, Value, Description</string>
+    <string name="csv_header_semicolon">Table; Type; Category Id; Category Name; Aggregate Id; Aggregate Name; Start Year; Start Month; Start Day; End Year; End Month; End Day; Period Num; Period; Value; Description</string>
+    <string name="dateformat">Date format</string>
+
+    <!--ABOUT-->
+    <string name="about">About</string>
+
+    <string name="about_msg">Thank you for using Aurora for financial accounting and budget planning. Perhaps these links will be useful:</string>
+    <string name="privacy"><a href="https://aurorafin.tech/privacy/">Privacy Policy and Terms</a></string>
+    <string name="help"><a href="https://aurorafin.tech/support/">Help and Support</a></string>
+    <string name="usage"><a href="https://aurorafin.tech/usage-guides/">Usage Guides</a></string>
+    <string name="creds">"© 2021 All Rights Reserved "</string>
+    <string name="rankapp"><a href="http://play.google.com/store/apps/details?id=tech.aurorafin.aurora">Rate this app</a></string>
+
+
+    <!--Subscription-->
+    <string name="subscription">Subscription</string>
+    <string name="options">Options:</string>
+    <string name="unlimited_categories">Unlimited Categories</string>
+    <string name="calculator">Calculator</string>
+    <string name="drive_backup_1">Drive Backup</string>
+    <string name="data_export">Data Export</string>
+    <string name="activate">Activate</string>
+    <string name="activated">Activated</string>
+    <string name="retry">Retry</string>
+    <string name="billingdisconnect">Billing Service Disconnected</string>
+    <string name="onemonth">1 Month /</string>
+    <string name="sixmonths">6 Months /</string>
+    <string name="oneyear">1 Year /</string>
+    <string name="forever">Forever /</string>
+    <string name="unexpected_err">Unexpected error</string>
+
+    <string name="onemonthlink"><a href="https://play.google.com/store/account/subscriptions?sku=1month_plan&amp;package=tech.aurorafin.aurora">Manage subscription</a></string>
+    <string name="sixmonthslink"><a href='https://play.google.com/store/account/subscriptions?sku=6month_plan&amp;package=tech.aurorafin.aurora'>Manage subscription</a></string>
+    <string name="oneyearlink"><a href="https://play.google.com/store/account/subscriptions?sku=12month_plan&amp;package=tech.aurorafin.aurora">Manage subscription</a></string>
+
+    <string name="auto_upload_subscription_error">Please check your subscription status</string>
+    <string name="get_your_subscr">Activate your subscription and get access to all functions.</string>
+
+    <string name="promocodeslink"><a href="https://aurorafin.tech/promo-codes/">Promo codes</a></string>
+
+    <!--RATE-->
+    <string name="rate">Rate</string>
+    <string name="rate_us_head">Rate Us</string>
+    <string name="rate_us_text">We work hard every day to improve the app! Our app has no ads and almost all functions are free!</string>
+    <string name="rate_us_stars">Please rate us a five stars on Google Play!</string>
+
+    <!--FEED-->
+    <string name="feedback">Feedback</string>
+    <string name="feedback_text">We are so sorry, that didn\'t match your expectations about the app. Please send us feedback! We are glad to listen to you and open to communications.</string>
+    <string name="feedback_send">Send</string>
+
+
+</resources>

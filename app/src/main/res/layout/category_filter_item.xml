@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    >
+
+    <tech.aurorafin.aurora.SpecCheckBox
+        android:id="@+id/category_filter_check_box"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:checked="false"
+        android:gravity="center_vertical"
+        android:textColor="@color/grey_txt_color"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:layout_marginEnd="30dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/category_filter_progress_bar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:clickable="false"
+        android:visibility="gone"
+        android:padding="2dp"
+        />
+
+</FrameLayout>

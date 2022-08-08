@@ -1,0 +1,221 @@
+<resources>
+    <string name="app_name">Аврора</string>
+
+    <string name="plan">План</string>
+
+    <!--Selection Btns Textx-->
+    <string name="cancel">Отмена</string>
+    <string name="selectAll">Выделить все</string>
+
+    <!--Copy Paste-->
+    <string name="copied">Скопировано</string>
+    <string name="pasted">Вставлено</string>
+
+    <!--Periods-->
+    <string name="year">ГОД</string>
+    <string name="year1">Год</string>
+    <string name="group_by">Группировка</string>
+    <string name="week">Неделя</string>
+    <string name="month">Месяц</string>
+
+
+    <!--CATEGORIES-->
+    <string name="categories">Категории</string>
+    <string name="expense">Расходы</string>
+    <string name="revenue">Доходы</string>
+    <string name="capital">Капитал</string>
+    <string name="new_category">НОВАЯ КАТЕГОРИЯ</string>
+    <string name="update_category">ОБНОВИТЬ КАТЕГОРИЮ</string>
+    <string name="add">+ Добавить</string>
+    <string name="aggregator">Агрегат</string>
+    <string name="save">Сохранить</string>
+    <string name="update">Обновить</string>
+    <string name="cancel1">Отмена</string>
+    <string name="type">Тип</string>
+    <string name="name">Имя</string>
+    <string name="category">Категория</string>
+    <string name="nickname_n_let">Ник (8 сим.)</string>
+    <string name="categ">Катег.</string>
+    <string name="active">Действует</string>
+
+
+    <string name="delete_message">Данные плана и Операции будут удалены.</string>
+    <string name="delete_title">Удалить категорию?</string>
+    <string name="ok">OK</string>
+
+    <string name="saved">Сохранено</string>
+    <string name="save_canceled">Сохранение прервано</string>
+    <string name="channel_name">Сервис операций с БД</string>
+    <string name="database_operations_service"> Сервис операций с БД</string>
+    <string name="waiting">Ожидание…</string>
+    <string name="DB_SERVICE_IS_NULL">Операции записи в БД недоступны</string>
+    <string name="check_errors">Проверка ошибок</string>
+    <string name="running">Работает…</string>
+    <string name="database_recovery">Восстановление БД</string>
+    <string name="database_recovery_message">Сервис по работе с базой данных некорректно завершил работу. Локальная резервная копия восстановлена.</string>
+    <string name="completing_tasks">Завершение задач…</string>
+    <string name="tasks_complete">Все задачи завершены. Сервис остановлен.</string>
+
+    <!--BALANCE-->
+    <string name="last_operations">Последние операции</string>
+    <string name="new_operation">+ Новая</string>
+    <string name="exp">Рас</string>
+    <string name="rev">Дох</string>
+    <string name="cap">Кап</string>
+    <string name="new_operation_header">НОВАЯ ОПЕРАЦИЯ</string>
+    <string name="update_operation_header">ОБНОВИТЬ ОПЕРАЦИЮ</string>
+    <string name="Amount">Сумма</string>
+    <string name="required">Необходимо</string>
+    <string name="decimal">Дробь</string>
+    <string name="date">Дата</string>
+    <string name="select_one">Выберете</string>
+    <string name="description">Описание</string>
+    <string name="optional">Необязательно</string>
+    <string name="operations">Операции</string>
+    <string name="done">Выполнено</string>
+    <string name="delete_operation">Удалить операцию</string>
+    <string name="delete_operations">Удалить операции</string>
+    <string name="delete_operations_message">Вы уверены, что хотите навсегда удалить операции?</string>
+    <string name="delete_operation_message"> Вы уверены, что хотите навсегда удалить операцию?</string>
+    <string name="balance">Баланс</string>
+
+
+    <string name="date_range">Диапазон</string>
+    <string name="analysis">Анализ</string>
+    <string name="q">К</string>
+    <string name="h">П</string>
+    <string name="ytd">С1ЯН</string>
+    <string name="to">до</string>
+    <string name="period">Период</string>
+    <string name="all">Все</string>
+    <string name="filtered">Фильтр</string>
+    <string name="fact">Факт</string>
+
+
+    <string name="no_scale">× 1</string>
+    <string name="Thousand">× 1 000</string>
+    <string name="Million">× 1 миллион</string>
+    <string name="Billion">× 1 миллиард</string>
+    <string name="Trillion">× 1 триллион</string>
+    <string name="total">Итого</string>
+    <string name="cumulative">Накопленный</string>
+    <string name="last_7_days">За 7\n дней</string>
+    <string name="last_28_days">За 28\n дней</string>
+    <string name="last_90_days">За 90\n дней</string>
+    <string name="vs_plan">\nvs План</string>
+    <string name="get_balance">Получить баланс</string>
+    <string name="assets">Активы</string>
+    <string name="total_assets">Итого Активы</string>
+    <string name="equity">Финансы</string>
+    <string name="total_equity">Итого Финансы</string>
+    <string name="close">Закрыть</string>
+    <string name="cash">Деньги</string>
+    <string name="profit">Прибыль</string>
+
+
+    <!--Backup-->
+    <string name="backup">Бэкап</string>
+    <string name="account">Аккаунт</string>
+    <string name="connect">Подключить</string>
+    <string name="connection_canceled">Подключение отменено</string>
+    <string name="connected">Подключен</string>
+    <string name="upload">Загрузить</string>
+    <string name="no_backup_available">Нет доступной копии</string>
+    <string name="database_copy">Копия БД</string>
+    <string name="network_error">Нет интернет соединения</string>
+    <string name="auto_backup">Авто копия</string>
+    <string name="upload_error">Ошибка загрузки, попробуйте снова</string>
+    <string name="auto_upload_error">Ошибка копии базы данных в Драйв</string>
+    <string name="auto_upload_error_msg">Нажмите для настройки</string>
+    <string name="auto_upload_settings_error">Обновите настройки авто копии БД</string>
+    <string name="auto_upload_success">Копия базы данных в Драйв обновлена</string>
+    <string name="next_backup">Следующее обновление</string>
+    <string name="db_backup">Копия БД Драйв</string>
+    <string name="backup_upload_run">Загрузка…</string>
+    <string name="days_28_backup">Раз в 28 дней</string>
+    <string name="days_7_backup">Раз в 7 дней</string>
+    <string name="days_1_backup">Каждый день</string>
+
+
+    <string name="drive_backup">Драйв Бэкап</string>
+    <string name="drive_backup_msg">Вы уверены что хотите скачать копию БД Драйв?</string>
+    <string name="drive_backup_alert">Локальная БД будет заменена!</string>
+    <string name="download">Скачать</string>
+    <string name="drive_backup_progress">Ожидайте завершения загрузки БД. Пожалуйста, не закрывайте приложение.</string>
+    <string name="service_is_running">Сервис по работе с БД сейчас работает. В данный момент скачать БД Драйв нельзя. Пожалуйста, попробуйте позже.</string>
+    <string name="terminate_title">Прервать загрузку?</string>
+    <string name="terminate_msg">Если прервать загрузку в работе приложения могут быть ошибки.</string>
+    <string name="terminate">Прервать</string>
+    <string name="closeCap">ЗАКРЫТЬ</string>
+    <string name="download_error">Ошибка. Пожалуйста, проверьте соединение с драйвом.</string>
+    <string name="download_success">Скачивание завершено. Копия успешно восстановлена.</string>
+    <string name="export">Экспорт</string>
+
+
+    <!--EXPORT-->
+    <string name="export_query">Экспорт данных</string>
+    <string name="query_running">Экспорт данных выполняется…</string>
+    <string name="query_complete">Экспорт выполнен</string>
+    <string name="export_csv">Экспорт</string>
+    <string name="parameters">Параметры</string>
+    <string name="tables">Таблицы</string>
+    <string name="day">День</string>
+    <string name="no_group">Без группы</string>
+    <string name="delimiter">Разделитель</string>
+    <string name="continue1">Продолжить</string>
+    <string name="warning">Предупреждение</string>
+    <string name="warning_msg">Сервис работы с БЗ работает. Если выполнить запрос сейчас, файл, возможно, будет с ошибками.</string>
+    <string name="tap_to_save">Нажмите для сохранения</string>
+
+
+    <string name="csv_header_comma">Table, Type, Category Id, Category Name, Aggregate Id, Aggregate Name, Start Year, Start Month, Start Day, End Year, End Month, End Day, Period Num, Period, Value, Description</string>
+    <string name="csv_header_semicolon">Table; Type; Category Id; Category Name; Aggregate Id; Aggregate Name; Start Year; Start Month; Start Day; End Year; End Month; End Day; Period Num; Period; Value; Description</string>
+    <string name="dateformat">Формат даты</string>
+
+    <!--ABOUT-->
+    <string name="about">О приложении</string>
+
+    <string name="about_msg">Благодарим Вас, что выбрали Аврору для учета финансов и планирования бюджета. Возможно, Вам пригодится:</string>
+    <string name="privacy"><a href="https://aurorafin.tech/privacy/">Политика Конфиденциальности и Условия</a></string>
+    <string name="help"><a href="https://aurorafin.tech/ru/podderzhka/">Помощь и Поддержка</a></string>
+    <string name="usage"><a href="https://aurorafin.tech/ru/rukovodstvo-polzovatelya/">Руководство пользователя</a></string>
+    <string name="creds">"© 2021 Все права защищены"</string>
+    <string name="rankapp"><a href="http://play.google.com/store/apps/details?id=tech.aurorafin.aurora">Оценить приложение</a></string>
+
+    <string name="subscription">Подписка</string>
+    <string name="options">Варианты:</string>
+    <string name="unlimited_categories">Неограниченные категории</string>
+    <string name="calculator">Калькулятор</string>
+    <string name="drive_backup_1">Бэкап Drive</string>
+    <string name="data_export">Экспорт данных</string>
+    <string name="activate">Активировать</string>
+    <string name="activated">Активирована</string>
+    <string name="retry">Переподключить</string>
+    <string name="billingdisconnect">Сервис платежей отключен</string>
+    <string name="onemonth">1 месяц /</string>
+    <string name="sixmonths">6 месяцев /</string>
+    <string name="oneyear">1 год /</string>
+    <string name="forever">Навсегда /</string>
+    <string name="unexpected_err">Неожиданная ошибка</string>
+
+    <string name="onemonthlink"><a href="https://play.google.com/store/account/subscriptions?sku=1month_plan&amp;package=tech.aurorafin.aurora">Управление подпиской</a></string>
+    <string name="sixmonthslink"><a href="https://play.google.com/store/account/subscriptions?sku=6month_plan&amp;package=tech.aurorafin.aurora">Управление подпиской</a></string>
+    <string name="oneyearlink"><a href="https://play.google.com/store/account/subscriptions?sku=12month_plan&amp;package=tech.aurorafin.aurora">Управление подпиской</a></string>
+    <string name="auto_upload_subscription_error">Пожалуйста, проверьте статус подписки</string>
+    <string name="get_your_subscr">Активируйте вашу подписку и получите доступ ко всем функциям.</string>
+    <string name="promocodeslink"><a href="https://aurorafin.tech/ru/promo-codes-2/">Промокоды</a></string>
+
+
+    <!--RATE-->
+    <string name="rate">Оценить</string>
+    <string name="rate_us_head">Оценить приложение</string>
+    <string name="rate_us_text">Мы очень сильно для Вас стараемся и каждый день улучшаем наше приложение! Наше приложение не содержит рекламы, а большинство функций бесплатные!</string>
+    <string name="rate_us_stars">Пожалуйста, поставьте нам 5 звезд в Google Play!</string>
+
+    <!--FEED-->
+    <string name="feedback">Обратная связь</string>
+    <string name="feedback_text">Нам сильно жаль, что мы не оправдали Ваших ожиданий.\nПожалуйста напишите нам, что Вам не понравилось. Мы рады выслушать Вас и открыты к сотрудничеству.</string>
+    <string name="feedback_send">Написать</string>
+
+
+</resources>

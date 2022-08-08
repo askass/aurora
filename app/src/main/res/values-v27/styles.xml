@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:navigationBarColor">#FFF</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <!--<item name="android:windowLightStatusBar">true</item>-->
+        <item name="calcDialogStyle">@style/CustomCalcDialogStyle</item>
+    </style>
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+        <!-- для Android 5+ вы можете поменять цвет colorPrimaryDark, чтобы соответствовать цвету windowBackground -->
+        <!-- <item name="colorPrimaryDark">@android:color/white</item> -->
+    </style>
+
+    <!-- PopUp theme for app bar menu. -->
+    <style name="PopUpTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:dropDownVerticalOffset">-4dp</item>
+    </style>
+
+    <!-- Theme for navigation menu. -->
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <!-- Theme for ToolBar ImageButtons. -->
+    <style name="ButtonGray">
+        <item name="colorButtonNormal">@color/tool_grey</item>
+    </style>
+
+
+    <style name="NumberPickerTheme" >
+        <item name="colorAccent">@color/table_txt_color</item>
+        <item name="colorControlNormal">@color/transparent</item>
+        <item name="android:textColorPrimary">@color/table_txt_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ScrollbarRecyclerView" parent="android:Widget">
+        <item name="android:scrollbars">vertical</item>
+    </style>
+
+
+    <style name="WhiteRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/white_txt_color</item>
+        <item name="colorControlActivated">@color/white_txt_color</item>
+    </style>
+
+    <!-- Theme for terminate dialog. -->
+    <style name="NoAnimDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/blue_row</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/blue_row</item>
+    </style>
+
+
+    <!-- Theme for terminate Calculator. -->
+    <style name="CustomCalcDialogStyle" parent="CalcDialogStyle">
+        <!-- You can customize the dialog's style here -->
+        <!-- This line changes the dialog's maximum height -->
+        <!-- <item name="calcDialogMaxHeight">300dp</item>-->
+
+        <!-- These lines change the style of operation buttons -->
+        <item name="calcOperationBtnStyle">@style/CustomCalcOperationBtnStyle</item>
+        <item name="calcOperationBtnColor">@color/blue_row</item>
+
+
+        <item name="calcEraseBtnStyle">@style/CustomCalcEraseBtnStyle</item>
+        <item name="calcDigitBtnStyle">@style/CustomCalcDigitBtnStyle</item>
+        <item name="calcValueStyle">@style/CustomCalcValueStyle</item>
+        <item name="calcExpressionStyle">@style/CustomCalcExpressionStyle</item>
+        <item name="calcDialogButtonStyle">@style/CustomCalcDialogButtonStyle</item>
+
+    </style>
+
+
+    <style name="CustomCalcOperationBtnStyle" parent="CalcOperationBtnStyle">
+        <!-- Don't forget to specify the parent! -->
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="CustomCalcEraseBtnStyle" parent="CalcEraseBtnStyle">
+        <!-- Don't forget to specify the parent! -->
+        <item name="tint">@color/default_txt_color</item>
+    </style>
+
+    <style name="CustomCalcDigitBtnStyle" parent="CalcNumberBtnStyle">
+        <!-- Don't forget to specify the parent! -->
+        <item name="android:textColor">@color/table_txt_color</item>
+    </style>
+
+    <style name="CustomCalcValueStyle" parent="CalcValueStyle">
+        <!-- Don't forget to specify the parent! -->
+        <item name="android:textColor">@color/table_txt_color</item>
+    </style>
+
+    <style name="CustomCalcExpressionStyle" parent="CalcExpressionStyle">
+        <!-- Don't forget to specify the parent! -->
+        <item name="android:textColor">@color/grey_txt_color</item>
+    </style>
+
+    <style name="CustomCalcDialogButtonStyle" parent="CalcDialogButtonStyle">
+        <!-- Don't forget to specify the parent! -->
+        <item name="android:textSize">@dimen/barLabelFontSize</item>
+    </style>
+
+
+</resources>

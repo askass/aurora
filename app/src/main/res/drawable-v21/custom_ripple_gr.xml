@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/grey_line"> <!-- The ripple will be red -->
+    <!-- the normal bg color will be light grey -->
+    <item android:top="-2dp" android:left="-2dp" android:right="-2dp">
+        <shape android:shape="rectangle">
+            <stroke android:width="0.7dp" android:color="@color/border_row" />
+            <solid android:color="@color/grey_row" />
+        </shape>
+    </item>
+
+    <!-- make sure the ripple doesn't exceed the bounds -->
+    <item
+        android:id="@android:id/mask"
+        android:drawable="@android:color/white" />
+</ripple>

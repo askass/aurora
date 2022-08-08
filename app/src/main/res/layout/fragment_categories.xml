@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:splitMotionEvents="false"
+    >
+
+<!--MAIN CATEGORY VIEW-->
+<LinearLayout
+    android:id="@+id/main_category_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:splitMotionEvents="false">
+
+ <!--   <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@drawable/custom_tool_border_bottom"/>-->
+
+  <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/white"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/blue_border_top_bottom"
+        android:layout_marginTop="13dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/toggle_rev"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/categories_toggle_bkg"
+            android:textAllCaps="false"
+            android:checked="true"
+            android:textOn="@string/revenue"
+            android:textOff="@string/revenue"
+            android:textColor="@color/toggle_txt_color"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:enabled="true"
+            android:saveEnabled="false"
+            />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/toggle_exp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/categories_toggle_bkg_spec"
+            android:textAllCaps="false"
+            android:checked="true"
+            android:textOn="@string/expense"
+            android:textOff="@string/expense"
+            android:textColor="@color/toggle_txt_color"
+            android:enabled="true"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:saveEnabled="false"/>
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/toggle_cap"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/categories_toggle_bkg"
+            android:textAllCaps="false"
+            android:checked="true"
+            android:textOn="@string/capital"
+            android:textOff="@string/capital"
+            android:textColor="@color/toggle_txt_color"
+            android:enabled="true"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:saveEnabled="false"/>
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/category_selector_holder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:splitMotionEvents="false"
+        >
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="1dp"
+        android:background="@drawable/custom_transparent_border_top">
+
+        <TextView
+            android:id="@+id/category_add_btn"
+            android:layout_width="180dp"
+            android:layout_height="39dp"
+            android:layout_gravity="center"
+            android:text="@string/add"
+            android:textColor="@color/pressed_txt_color"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_btn_ripple"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@drawable/custom_tool_border_top_grey"/>
+
+
+</LinearLayout>
+
+<!--NEW UPDATE VIEW-->
+<LinearLayout
+        android:id="@+id/new_update_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@color/blue_row">
+
+            <TextView
+                android:id="@+id/new_update_view_header"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:textColor="@color/white_txt_color"
+                android:textStyle="bold"
+                android:text="@string/new_category"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/category_delete_btn"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_ripple"
+                android:src="@drawable/category_btn_delete"
+                android:layout_marginEnd="5dp"/>
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/category_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="@string/type"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/table_txt_color"
+                    android:layout_marginBottom="2.5dp"
+                    android:paddingStart="20dp"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp">
+
+                    <androidx.appcompat.widget.AppCompatToggleButton
+                        android:id="@+id/type_rev"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_ripple_bkg"
+                        android:checked="true"
+                        android:fontFamily="sans-serif"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/category_selector_txt_color"
+                        android:textOff="@string/revenue"
+                        android:textOn="@string/revenue"
+                        android:textSize="14sp"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatToggleButton
+                        android:id="@+id/type_exp"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_ripple_bkg"
+                        android:checked="false"
+                        android:fontFamily="sans-serif"
+                        android:textAllCaps="false"
+                        android:textColor="@color/category_selector_txt_color"
+                        android:textOff="@string/expense"
+                        android:textOn="@string/expense"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp">
+                    <androidx.appcompat.widget.AppCompatToggleButton
+                        android:id="@+id/type_cap"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_ripple_bkg"
+                        android:checked="false"
+                        android:fontFamily="sans-serif"
+                        android:textAllCaps="false"
+                        android:textColor="@color/category_selector_txt_color"
+                        android:textOff="@string/capital"
+                        android:textOn="@string/capital"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        android:textAlignment="center"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatToggleButton
+                        android:id="@+id/type_agg"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_ripple_bkg"
+                        android:checked="false"
+                        android:fontFamily="sans-serif"
+                        android:textAllCaps="false"
+                        android:textColor="@color/category_selector_txt_color"
+                        android:textOff="@string/aggregator"
+                        android:textOn="@string/aggregator"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_line"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TableLayout
+                    android:id="@+id/new_update_input_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:textAlignment="center"
+                    android:animateLayoutChanges="false">
+
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/name_text_view"
+                            android:width="150dp"
+                            android:height="40dp"
+                            android:textColor="@color/table_txt_color"
+                            android:text="@string/name"
+                            android:textSize="14sp"
+                            android:gravity="center_vertical"
+                            />
+                        <EditText
+                            android:id="@+id/category_full_name"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:background="@color/transparent"
+                            android:textColor="@color/table_txt_color"
+                            android:textColorHint="@color/grey_line"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:paddingStart="10dp"
+                            android:inputType="textCapSentences"
+                            android:maxLines="1"
+                            android:hint="@string/category"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:background="@drawable/custom_transparent_border_top"
+                        android:paddingTop="5dp">
+                        <TextView
+                            android:id="@+id/nick_text_view"
+                            android:width="150dp"
+                            android:height="40dp"
+                            android:textColor="@color/table_txt_color"
+                            android:text="@string/nickname_n_let"
+                            android:textSize="14sp"
+                            android:gravity="center_vertical"
+                            />
+                        <EditText
+                            android:id="@+id/category_short_name"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:background="@color/transparent"
+                            android:textColor="@color/table_txt_color"
+                            android:textColorHint="@color/grey_line"
+                            android:textSize="16sp"
+                            android:gravity="center_vertical"
+                            android:paddingStart="10dp"
+                            android:inputType="textNoSuggestions"
+                            android:maxLines="1"
+                            android:maxLength="8"
+
+                            android:hint="@string/categ"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/aggregator_selector"
+                        android:background="@drawable/custom_transparent_border_top"
+                        android:paddingTop="5dp">
+                        <TextView
+                            android:width="150dp"
+                            android:height="40dp"
+                            android:textColor="@color/table_txt_color"
+                            android:text="@string/aggregator"
+                            android:textSize="14sp"
+                            android:gravity="center_vertical"/>
+                        <Spinner
+                            android:id="@+id/aggregator_spinner"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            />
+                    </TableRow>
+
+
+
+                    <TableRow
+                        android:id="@+id/active_cat_selector"
+                        android:paddingTop="5dp"
+                        android:background="@drawable/custom_transparent_border_top">
+                        <TextView
+                            android:width="150dp"
+                            android:height="40dp"
+                            android:textColor="@color/table_txt_color"
+                            android:text="@string/active"
+                            android:textSize="14sp"
+                            android:gravity="center_vertical"/>
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/active_cat_chekbox"
+                            android:textColor="@color/blue_row"
+                            android:checked="true"
+                            android:layout_marginStart="3dp"
+                            />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+       <!--  <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_line"/>-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:orientation="horizontal"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:layout_height="50dp"
+            android:paddingTop="1dp"
+            android:background="@drawable/custom_transparent_border_top"
+            >
+
+            <TextView
+                android:id="@+id/update_save_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:text="@string/save"
+                android:textColor="@color/pressed_txt_color"
+                android:textAllCaps="false"
+                android:background="@drawable/custom_btn_ripple"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/cancel_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:text="@string/cancel1"
+                android:textColor="@color/pressed_cancel_txt_color"
+                android:textAllCaps="false"
+                android:background="@drawable/custom_ripple"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginStart="10dp"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

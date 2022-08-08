@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:background="@color/blue_row"
+      android:text="@string/categories"
+      android:gravity="center_vertical"
+      android:paddingStart="20dp"
+      android:textSize="20dp"
+      android:fontFamily="sans-serif-medium"
+      android:textColor="@color/white_txt_color"/>
+
+    <FrameLayout
+        android:id="@+id/recycler_holder"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"/>
+
+
+    <CheckBox
+        android:id="@+id/analysis_category_select_all"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:checked="false"
+        android:gravity="center_vertical"
+        android:textColor="@color/grey_txt_color"
+        android:textSize="14sp"
+        android:text="@string/selectAll"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/custom_transparent_border_top_light"
+        />
+</LinearLayout>
+

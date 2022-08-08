@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="@drawable/custom_transparent_border_bottom_light"
+    android:id="@+id/category_filter_item_aggregator_holder"
+    android:paddingBottom="1dp">
+
+    <TextView
+        android:id="@+id/category_filter_item_aggregator"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:textColor="@color/table_txt_color"
+        android:textSize="14sp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/custom_ripple"
+        android:clickable="true"
+        android:focusable="true"
+        android:singleLine="true"
+        android:ellipsize="marquee"/>
+
+</FrameLayout>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:splitMotionEvents="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/blue_row">
+
+        <TextView
+            android:id="@+id/new_operation_header"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:textColor="@color/white_txt_color"
+            android:textStyle="bold"
+            android:text="@string/new_operation_header"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/operation_delete_btn"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_ripple"
+            android:src="@drawable/category_btn_delete"
+            android:layout_marginEnd="5dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:splitMotionEvents="false">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:splitMotionEvents="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/amount_text_label"
+                    android:layout_width="116dp"
+                    android:layout_height="40dp"
+                    android:textColor="@color/table_txt_color"
+                    android:text="@string/Amount"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"/>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/plus_minus_btn"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/custom_ripple"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/plan_btn_plusminus" />
+
+                <EditText
+                    android:id="@+id/amount_input"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:minWidth="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/transparent"
+                    android:textColor="@color/table_txt_color"
+                    android:textColorHint="@color/grey_line"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="1dp"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:hint="0.00"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/custom_transparent_border_top"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:splitMotionEvents="false">
+                <TextView
+                    android:id="@+id/date_text_label"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:textColor="@color/table_txt_color"
+                    android:text="@string/date"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/operation_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="@color/table_txt_color"
+                    android:textSize="16sp"
+                    android:paddingStart="10dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/custom_ripple"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/custom_transparent_border_top"
+                android:paddingTop="5dp"
+                android:orientation="horizontal"
+                android:splitMotionEvents="false">
+                <TextView
+                    android:id="@+id/operation_category_label"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:textColor="@color/table_txt_color"
+                    android:text="@string/category"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:id="@+id/operation_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textColor="@color/table_txt_color"
+                        android:hint="@string/select_one"
+                        android:textSize="16sp"
+                        android:paddingStart="10dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/custom_ripple"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical|end"
+                        android:src="@drawable/ic_arrow_drop_down_grey_24dp"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/categories_chips_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:flexWrap="wrap"
+                app:alignItems="stretch"
+                app:alignContent="stretch"
+                android:background="@drawable/custom_transparent_border_top"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp">
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <TextView
+                android:id="@+id/operation_description_label"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/table_txt_color"
+                android:text="@string/description"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:background="@drawable/custom_transparent_border_top"/>
+
+            <EditText
+                android:id="@+id/operation_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="120dp"
+                android:textColor="@color/table_txt_color"
+                android:textColorHint="@color/grey_line"
+                android:textSize="16sp"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="30dp"
+                android:paddingBottom="15dp"
+                android:maxLength="500"
+                android:background="@drawable/custom_transparent_border_bottom"/>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:layout_height="50dp"
+        android:paddingTop="1dp"
+        android:background="@drawable/custom_transparent_border_top">
+        <TextView
+            android:id="@+id/save_operation"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="39dp"
+            android:layout_gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/pressed_txt_color"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_btn_ripple"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/cancel_operation"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:text="@string/cancel1"
+            android:textColor="@color/pressed_cancel_txt_color"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_ripple"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

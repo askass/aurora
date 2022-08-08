@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="Sp16Size">16sp</dimen>
+    <dimen name="barLabelFontSize">15sp</dimen>
+    <dimen name="Sp14Size">14sp</dimen>
+</resources>

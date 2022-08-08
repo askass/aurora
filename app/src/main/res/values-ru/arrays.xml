@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="months">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+
+
+    <string-array name="short_months">
+        <item>Янв</item>
+        <item>Фев</item>
+        <item>Мар</item>
+        <item>Апр</item>
+        <item>Май</item>
+        <item>Июн</item>
+        <item>Июл</item>
+        <item>Авг</item>
+        <item>Сен</item>
+        <item>Окт</item>
+        <item>Ноя</item>
+        <item>Дек</item>
+    </string-array>
+
+
+    <string-array name="week_days">
+        <item>Вс</item>
+        <item>Пн</item>
+        <item>Вт</item>
+        <item>Ср</item>
+        <item>Чт</item>
+        <item>Пт</item>
+        <item>Сб</item>
+    </string-array>
+
+
+    <string-array name="category_types">
+        <item>n</item>
+        <item>А</item>
+        <item>Д</item>
+        <item>Р</item>
+        <item>К</item>
+    </string-array>
+
+
+    <string-array name="category_types_plan_names">
+        <item>n</item>
+        <item>Агрегат План</item>
+        <item>Доходы План</item>
+        <item>Расходы План</item>
+        <item>Капитал План</item>
+    </string-array>
+
+
+    <string-array name="category_types_operation_names">
+        <item>n</item>
+        <item>Агрегат Операции</item>
+        <item>Доходы Операции</item>
+        <item>Расходы Операции</item>
+        <item>Капитал Операции</item>
+    </string-array>
+
+    <string-array name="category_short_types">
+        <item>n</item>
+        <item>Агр</item>
+        <item>Дох</item>
+        <item>Рас</item>
+        <item>Кап</item>
+    </string-array>
+
+
+    <string-array name="category_long_types">
+        <item>Empty aggregate</item>
+        <item>Агрегат</item>
+        <item>Доходы</item>
+        <item>Расходы</item>
+        <item>Капитал</item>
+    </string-array>
+
+    <string-array name="date_formats">
+        <item>ГГГГ/ММ/ДД</item>
+        <item>ГГГГ/ДД/ММ</item>
+        <item>ММ/ДД/ГГГГ</item>
+        <item>ДД/ММ/ГГГГ</item>
+        <item>ГГ/ММ/ДД</item>
+        <item>ГГ/ДД/ММ</item>
+        <item>ММ/ДД/ГГ</item>
+        <item>ДД/ММ/ГГ</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="tech.aurorafin.aurora.MainActivity">
+
+
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"/>
+  <!--  <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_line"
+       />-->
+
+    <FrameLayout
+        android:id="@+id/fragmentHolder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:elevation="0dp"
+        android:background="@drawable/custom_white_border_top"
+        app:itemIconSize="27dp"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView"
+        android:animateLayoutChanges="false"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/nav_menu"
+        android:splitMotionEvents="false"
+        >
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+       <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"/>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_date_format"
+        android:title="@string/dateformat"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/action_backup"
+        android:title="@string/backup"
+        app:showAsAction="collapseActionView"/>
+
+    <item
+        android:id="@+id/action_export"
+        android:title="@string/export"
+        app:showAsAction="collapseActionView"/>
+
+    <item
+        android:id="@+id/action_subscription"
+        android:title="@string/subscription"
+        app:showAsAction="collapseActionView"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_rate"
+        android:title="@string/rate_us_head"
+        app:showAsAction="collapseActionView"/>
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/about"
+        app:showAsAction="collapseActionView"/>
+</menu>

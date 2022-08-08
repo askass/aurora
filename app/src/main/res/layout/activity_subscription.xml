@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:orientation="horizontal"
+        android:background="@color/blue_row">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/subscription_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_btn_ripple"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_marginStart="10dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="47dp"
+            android:textColor="@color/white_txt_color"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/subscription"
+            android:textAllCaps="false"
+            android:textSize="19sp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/new_update_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/table_txt_color"
+                android:text="@string/get_your_subscr"
+                android:textSize="16sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                />
+
+            <TextView
+                    android:id="@+id/options_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="@string/options"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/table_txt_color"
+                    android:layout_marginBottom="2.5dp"
+                    android:paddingStart="20dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/connection_loader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ProgressBar
+                        android:id="@+id/billing_connect_progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/connect_error_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red_txt_color"
+                        android:text=""
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:textSize="14sp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/reconnect_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/retry"
+                        android:textColor="@color/pressed_cancel_txt_color"
+                        android:textAllCaps="false"
+                        android:background="@drawable/custom_ripple"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="8dp"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/subscription_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp">
+
+                    <androidx.appcompat.widget.AppCompatToggleButton
+                        android:enabled="false"
+                        android:id="@+id/option_1m"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/selector_ripple_bkg"
+                        android:checked="true"
+                        android:fontFamily="sans-serif"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/category_selector_txt_color"
+                        android:textOff=""
+                        android:textOn=""
+                        android:textSize="14sp"/>
+
+                        <androidx.appcompat.widget.AppCompatToggleButton
+                            android:enabled="false"
+                            android:id="@+id/option_6m"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/selector_ripple_bkg"
+                            android:checked="true"
+                            android:fontFamily="sans-serif"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/category_selector_txt_color"
+                            android:textOff=""
+                            android:textOn=""
+                            android:textSize="14sp"
+                            android:visibility="gone"/>
+
+                        <androidx.appcompat.widget.AppCompatToggleButton
+                            android:enabled="false"
+                            android:id="@+id/option_1y"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/selector_ripple_bkg"
+                            android:checked="false"
+                            android:fontFamily="sans-serif"
+                            android:textAllCaps="false"
+                            android:textColor="@color/category_selector_txt_color"
+                            android:textOff=""
+                            android:textOn=""
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            android:textAlignment="center"
+                            />
+
+
+                        <androidx.appcompat.widget.AppCompatToggleButton
+                            android:enabled="false"
+                            android:id="@+id/option_fr"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/selector_ripple_bkg"
+                            android:checked="false"
+                            android:fontFamily="sans-serif"
+                            android:textAllCaps="false"
+                            android:textColor="@color/category_selector_txt_color"
+                            android:textOff=""
+                            android:textOn=""
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            android:textAlignment="center"
+                            />
+
+
+
+                </LinearLayout>
+            </FrameLayout>
+
+
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_line"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+
+
+                <TableLayout
+                    android:id="@+id/new_update_input_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textAlignment="center"
+                    android:animateLayoutChanges="false">
+                    <TableRow
+                        android:layout_height="40dp">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/nav_icon_categories"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:textColor="@color/table_txt_color"
+                            android:text="@string/unlimited_categories"
+                            android:textSize="15sp"
+                            android:maxLines="1"
+                            android:gravity="center_vertical"
+                            android:paddingStart="10dp"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@mipmap/drive_icon"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:textColor="@color/table_txt_color"
+                            android:text="@string/drive_backup_1"
+                            android:textSize="15sp"
+                            android:maxLines="1"
+                            android:gravity="center_vertical"
+                            android:paddingStart="10dp"/>
+                    </TableRow>
+                    <TableRow>
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/export_cvg_icon"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:textColor="@color/table_txt_color"
+                            android:text="@string/data_export"
+                            android:textSize="15sp"
+                            android:maxLines="1"
+                            android:gravity="center_vertical"
+                            android:paddingStart="10dp"/>
+                    </TableRow>
+                    <TableRow>
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/plan_btn_plusminus"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:textColor="@color/table_txt_color"
+                            android:text="@string/calculator"
+                            android:textSize="15sp"
+                            android:maxLines="1"
+                            android:gravity="center_vertical"
+                            android:paddingStart="10dp"/>
+                    </TableRow>
+                </TableLayout>
+            <TextView
+                android:id="@+id/activation_error_message"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/red_txt_color"
+                android:text=""
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp"
+                android:alpha="0"
+                />
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="20dp">
+                <ProgressBar
+                    android:id="@+id/activate_progress_bar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:clickable="false"
+                    android:visibility="gone"
+                    android:padding="2dp"
+                    />
+                <TextView
+                    android:id="@+id/activate_btn"
+                    android:layout_width="160dp"
+                    android:layout_height="37dp"
+                    android:text="@string/activate"
+                    android:textColor="@color/pressed_txt_color"
+                    android:textAllCaps="false"
+                    android:background="@drawable/custom_btn_ripple"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:enabled="false"/>
+            </FrameLayout>
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/subs_management_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_row"
+                android:text="@string/onemonthlink"
+                android:textSize="14sp"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/subs_management_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_row"
+                android:text="@string/sixmonthslink"
+                android:textSize="14sp"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/subs_management_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_row"
+                android:text="@string/oneyearlink"
+                android:textSize="14sp"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:id="@+id/promo_codes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_row"
+                android:text="@string/promocodeslink"
+                android:textSize="14sp"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

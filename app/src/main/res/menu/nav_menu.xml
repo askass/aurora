@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/planBtn"
+        android:title="@string/plan"
+        android:icon="@drawable/nav_btn_plan" />
+    <item android:id="@+id/dashBtn"
+        android:title="@string/analysis"
+        android:icon="@drawable/nav_btn_dash" />
+    <item android:id="@+id/balanceBtn"
+        android:title="@string/balance"
+        android:icon="@drawable/nav_btn_balance" />
+    <item android:id="@+id/operationsBtn"
+        android:title="@string/operations"
+        android:icon="@drawable/nav_btn_operations" />
+    <item android:id="@+id/categoriesBtn"
+        android:title="@string/categories"
+        android:icon="@drawable/nav_btn_categories" />
+</menu>

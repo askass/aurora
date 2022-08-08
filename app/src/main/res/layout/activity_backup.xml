@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:orientation="horizontal"
+        android:background="@color/blue_row">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/backup_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_btn_ripple"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_marginStart="10dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="47dp"
+            android:textColor="@color/white_txt_color"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/backup"
+            android:textAllCaps="false"
+            android:textSize="19sp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:splitMotionEvents="false">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:splitMotionEvents="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/drive_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textColor="@color/table_txt_color"
+                    android:text="Google Drive™"
+                    android:textSize="17sp"
+                    android:maxLines="1"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/account_label"
+                android:layout_marginTop="5dp"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:textColor="@color/table_txt_color"
+                android:text="@string/account"
+                android:textSize="14sp"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"/>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp">
+                <TextView
+                    android:id="@+id/account_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textColor="@color/table_txt_color"
+                    android:hint="@string/select_one"
+                    android:textSize="16sp"
+                    android:gravity="bottom"
+                    android:background="@drawable/custom_ripple"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="5dp"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_arrow_drop_down_grey_24dp"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/error_message"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:textColor="@color/red_txt_color"
+                android:text=""
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp"
+                android:alpha="0"
+                />
+
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="37dp">
+                <ProgressBar
+                    android:id="@+id/connect_progress_bar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:clickable="false"
+                    android:visibility="gone"
+                    android:padding="2dp"
+                    />
+                <TextView
+                    android:id="@+id/connect_btn"
+                    android:layout_width="160dp"
+                    android:layout_height="37dp"
+                    android:text="@string/connect"
+                    android:textColor="@color/pressed_txt_color"
+                    android:textAllCaps="false"
+                    android:background="@drawable/custom_btn_ripple"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line"/>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:textColor="@color/table_txt_color"
+                        android:text="@string/backup"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+                        <ImageView
+                            android:id="@+id/backup_image"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/drive_icon_grey"
+                            android:visibility="gone"
+                            />
+                        <ProgressBar
+                            android:id="@+id/upload_progress_bar"
+                            android:layout_width="40dp"
+                            android:layout_height="30dp"
+                            android:clickable="false"
+                            android:visibility="gone"
+                            android:padding="2dp"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <TextView
+                            android:id="@+id/backup_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:textColor="@color/grey_txt_color"
+                            android:text=""
+                            android:textSize="16sp"
+                            android:maxLines="2"
+                            android:gravity="center_vertical"
+                            android:paddingStart="10dp"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/upload_error_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:textColor="@color/red_txt_color"
+                        android:text=""
+                        android:maxLines="1"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="4dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/upload_btn"
+                            android:layout_width="160dp"
+                            android:layout_height="37dp"
+                            android:text="@string/upload"
+                            android:textColor="@color/pressed_txt_color"
+                            android:textAllCaps="false"
+                            android:background="@drawable/custom_btn_ripple"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"/>
+
+                        <TextView
+                            android:id="@+id/download_btn"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:text="@string/download"
+                            android:textColor="@color/pressed_cancel_txt_color"
+                            android:textAllCaps="false"
+                            android:background="@drawable/custom_ripple"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginStart="20dp" />
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_line"/>
+
+                    <Switch
+                        android:id="@+id/auto_backup_switch"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:checked="false"
+                        android:text="@string/auto_backup"
+                        android:textColor="@color/table_txt_color"
+                        android:textSize="14sp"
+                        android:saveEnabled="false"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp">
+                        <RadioButton
+                            android:id="@+id/days_28_backup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/days_28_backup"
+                            android:textColor="@color/grey_txt_color"
+                            android:checked="true"
+                            android:textSize="14sp"
+                            android:layout_marginBottom="0dp"
+                            android:saveEnabled="false"
+                            android:enabled="false"/>
+                        <RadioButton
+                            android:id="@+id/days_7_backup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/days_7_backup"
+                            android:textColor="@color/grey_txt_color"
+                            android:saveEnabled="false"
+                            android:textSize="14sp"
+                            android:layout_marginTop="5dp"
+                            android:enabled="false"
+                            />
+                        <RadioButton
+                            android:id="@+id/days_1_backup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/days_1_backup"
+                            android:textColor="@color/grey_txt_color"
+                            android:saveEnabled="false"
+                            android:textSize="14sp"
+                            android:layout_marginTop="5dp"
+                            android:enabled="false"
+                            />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/next_backup"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textColor="@color/blue_row"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+
+
+                <FrameLayout
+                    android:id="@+id/backup_control_lock"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:alpha="0.5"
+                    android:visibility="visible"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </FrameLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

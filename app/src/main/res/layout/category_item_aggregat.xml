@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/aggregate_container"
+    >
+    <TextView
+        android:id="@+id/aggregate_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_ripple"
+        android:text=""
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/table_txt_color"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:singleLine="true"/>
+
+</FrameLayout>
