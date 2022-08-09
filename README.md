@@ -20,6 +20,8 @@ Layout implementation is in the [fragment_plan.xm](/app/src/main/res/layout/frag
 Animation and motion controller implementation is in the [PlanFragment.java](/app/src/main/java/tech/aurorafin/aurora/PlanFragment.java#L564)
 
 ## Table with expand/collapse rows
+![image](https://user-images.githubusercontent.com/74041314/183675533-2b67610f-308b-49e9-b0a8-d01d03019db8.png)
+
 Great interface solution to present monthly or weekly aggregated financial data on a mobile screen. Each row shows subtotal for a period and can be expanded to days or single transactions. The table is well optimized, and animations are running smoothly even on old hardware devices.
 
 The table is based on android standard RecyclerView with custom adapters for main and sub rows. 
@@ -29,11 +31,15 @@ Expandable row adapter implementation is in [PlanTableAdapter.java](/app/src/mai
 Sub row adapter example is in the [PlanTableSubRowAdapter.java](/app/src/main/java/tech/aurorafin/aurora/PlanTableSubRowAdapter.java)
 
 ## Waterfall chart
+![image](https://user-images.githubusercontent.com/74041314/183676343-0e312e97-9b30-4da2-807b-3cff4fbe69da.png)
+
 One of the most powerfull charts in finance is a waterfall chart. Made of primitive views the chart automatically calculates the best layout to show the most valuable insides of financial data.
 
 The chart is implemented in the [AnalysisFragment.java](/app/src/main/java/tech/aurorafin/aurora/AnalysisFragment.java#L1140)
 
-## Income Statement table
+## Income Statement Table
+![image](https://user-images.githubusercontent.com/74041314/183676672-bd166487-a6af-4186-98eb-933923307e1e.png)
+
 The table with expandable rows serves as a data sourse for the waterfall chart above.
 An implementation is also in the [AnalysisFragment.java](/app/src/main/java/tech/aurorafin/aurora/AnalysisFragment.java#L1079)
 
