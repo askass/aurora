@@ -19,6 +19,11 @@ Layout implementation is in the [fragment_plan.xm](/app/src/main/res/layout/frag
 
 Animation and motion controller implementation is in the [PlanFragment.java](/app/src/main/java/tech/aurorafin/aurora/PlanFragment.java#L564)
 
+Watch the video about the interface
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nSra0Z7E3wg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
 ## Table with expand/collapse rows
 ![image](https://user-images.githubusercontent.com/74041314/183675533-2b67610f-308b-49e9-b0a8-d01d03019db8.png)
 
