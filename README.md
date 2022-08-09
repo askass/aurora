@@ -41,6 +41,7 @@ The chart is implemented in the [AnalysisFragment.java](/app/src/main/java/tech/
 ![image](https://user-images.githubusercontent.com/74041314/183676672-bd166487-a6af-4186-98eb-933923307e1e.png)
 
 The table with expandable rows serves as a data sourse for the waterfall chart above.
+
 An implementation is also in the [AnalysisFragment.java](/app/src/main/java/tech/aurorafin/aurora/AnalysisFragment.java#L1079)
 
 # License
